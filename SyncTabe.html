@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details - Gmail Genie</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #080710;
+    }
+
+    .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+    
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .shape:nth-child(1) {
+             width: 500px;
+            height: 500px;
+            background: rgba(125, 125, 255, 0.1);
+            animation: float1 20s infinite ease-in-out;
+            top: -250px;
+            right: -100px; 
+            background: linear-gradient(
+            to right,
+           #ff512f,
+           #f09819)
+           
+        }
+
+        .shape:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: rgba(125, 200, 255, 0.1);
+            animation: float2 15s infinite ease-in-out;
+            bottom: -150px;
+            left: -100px;
+            background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+        }
+
+        @keyframes float1 {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(100px, 100px) rotate(180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(-100px, -50px) rotate(-180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(-360deg);
+            }
+        }    
+    
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+    }
+    
+    .nav-links a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #5f6368;
+    }
+    
+    .main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    
+    .user-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      margin-top: 3rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .stats-table th, .stats-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .stats-table th {
+      background: #1a73e8;
+      color: white;
+    }
+    
+    .stats-table tr:last-child td {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+  <nav class="nav-content">
+    <a href="/" class="logo">Gmail Genie</a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="#about">Sync</a>
+      <a href="/login.html">Logout</a>
+    </div>
+  </nav>
+  
+  <main class="main">
+    <div class="user-card">
+      <h2>User Details</h2>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> john.doe@gmail.com</p>
+      <p><strong>Account Type:</strong> Premium</p>
+      <p><strong>Last Sync:</strong> December 6, 2024 10:30 AM</p>
+    </div>
+    
+    <div class="user-card">
+      <h2>User Statistics</h2>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Total Mails</th>
+            <th>Processed Mails</th>
+            <th>Remaining Mails</th>
+            <th>Ignored Mails</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1,500</td>
+            <td>1,200</td>
+            <td>250</td>
+            <td>50</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

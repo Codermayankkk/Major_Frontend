@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Gmail Genie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #080710;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        nav {
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #333;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .steps {
+            margin-top: 4rem;
+            text-align: left;
+        }
+
+        .step {
+            background: whitesmoke;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .step h3 {
+            color: black;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: black;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #4A90E2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 2rem;
+        }
+
+        .cta-button:hover {
+            background: #357ABD;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .shape:nth-child(1) {
+             width: 500px;
+            height: 500px;
+            background: rgba(125, 125, 255, 0.1);
+            animation: float1 20s infinite ease-in-out;
+            top: -250px;
+            right: -100px; 
+            background: linear-gradient(
+            to right,
+           #ff512f,
+           #f09819)
+           
+        }
+
+        .shape:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: rgba(125, 200, 255, 0.1);
+            animation: float2 15s infinite ease-in-out;
+            bottom: -150px;
+            left: -100px;
+            background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+        }
+
+        @keyframes float1 {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(100px, 100px) rotate(180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(-100px, -50px) rotate(-180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(-360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <nav>
+        <div class="nav-content">
+            <a href="/" class="logo">Gmail Genie</a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="SyncTabe.html">Sync</a>
+                <a href="/login.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>How to Use Gmail Genie</h1>
+        <p>Follow these steps to get started with Gmail Genie:</p>
+
+        <div class="steps">
+            <div class="step">
+                <h3>Step 1: Sign Up</h3>
+                <p>Create an account by clicking on the "Get Started" button on the homepage and fill in the required information.</p>
+            </div>
+            <div class="step">
+                <h3>Step 2: Connect Your Gmail Account</h3>
+                <p>Log in using your Google account and grant the necessary permissions for Gmail Genie to access your emails.</p>
+            </div>
+            <div class="step">
+                <h3>Step 3: Configure Settings</h3>
+                <p>Set up your preferences for email filtering and PDF extraction in the settings menu.</p>
+            </div>
+            <div class="step">
+                <h3>Step 4: Start Using Gmail Genie</h3>
+                <p>Once everything is set up, Gmail Genie will automatically filter your emails and extract PDFs based on your preferences.</p>
+            </div>
+        </div>
+
+        <a href="home.html" class="cta-button">Back to Homepage</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #080710;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .shape:nth-child(1) {
+             width: 500px;
+            height: 500px;
+            background: rgba(125, 125, 255, 0.1);
+            animation: float1 20s infinite ease-in-out;
+            top: -250px;
+            right: -100px; 
+            background: linear-gradient(
+            to right,
+           #ff512f,
+           #f09819)
+           
+        }
+
+        .shape:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: rgba(125, 200, 255, 0.1);
+            animation: float2 15s infinite ease-in-out;
+            bottom: -150px;
+            left: -100px;
+            background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+        }
+
+        @keyframes float1 {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(100px, 100px) rotate(180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(-100px, -50px) rotate(-180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(-360deg);
+            }
+        }
+
+        nav {
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #333;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: gainsboro;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #4A90E2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #357ABD;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <nav>
+        <div class="nav-content">
+            <a href="/" class="logo">Gmail Genie</a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="SyncTabe.html">Sync</a>
+                <a href="/login.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Gmail Genie</h1>
+            <p class="subtitle">"Gmail Genie: Your Email, Organized Effortlessly!"</p>
+            <a href="getStarted.html" class="cta-button">Get Started</a>
+        </section>
+
+        <section class="features" id="features">
+            <div class="feature-card">
+                <h3>Automated PDF Extraction</h3>
+                <p>Seamlessly extracts PDF attachments from emails without manual intervention.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Intelligent Email Filtering</h3>
+                <p>Filters emails based on predefined keywords to identify relevant messages.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Organized File Storage</h3>
+                <p>Categorizes and stores extracted PDFs in a structured folder system for easy access.</p>
+            </div>
+            <div class="feature-card">
+                <h3>OAuth2 Secure Authentication</h3>
+                <p>Ensures user data security with Google’s OAuth2 login mechanism.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
