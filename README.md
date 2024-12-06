@@ -11,8 +11,6 @@ responsive user experience to enhance productivity by automating repetitive task
 
 **Attachment Management:** Categorization of PDF attachments by content type.
 
-Automatic storage in structured folder systems.
-
 **Search & Filter:** Powerful search functionality to locate specific emails or attachments quickly.
 
 **Responsive Design:** Works seamlessly on desktops, tablets, and mobile devices.
@@ -20,4 +18,3 @@ Automatic storage in structured folder systems.
 **Customization:**
 Manage folder structures for better organization.
 
-Apply user-defined rules for attachment categorization.
